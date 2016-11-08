@@ -1,0 +1,15 @@
+### Node ###
+logs
+*.log
+
+### OSX ###
+.DS_Store
+
+### Dependency ###
+node_modules
+
+### Dist ###
+dist
+
+### Vim ###
+*.swp
