@@ -1,4 +1,18 @@
-let one = 1;
-const two = 2;
+import React from 'react';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import App from './app.js';
 
-var func = () => 'Hello World';
+render(<AppContainer><App/></AppContainer>, document.querySelector('#app'));
+
+if (module.hot) {
+  module.hot.accept('./app.js', () => {
+    const App = require('./app.js').default;
+    render(
+      <AppContainer>
+        <App/>
+      </AppContainer>,
+      document.querySelector('#app')
+    );
+  });
+}
