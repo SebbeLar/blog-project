@@ -6,13 +6,13 @@ import App from './app.js';
 render(<AppContainer><App/></AppContainer>, document.querySelector('#app'));
 
 if (module.hot) {
-  module.hot.accept('./app.js', () => {
-    const App = require('./app.js').default;
-    render(
-      <AppContainer>
-        <App/>
-      </AppContainer>,
-      document.querySelector('#app')
-    );
-  });
+    module.hot.accept('./app.js', () => {
+        const App = require('./app.js').default;
+        render(
+            <AppContainer>
+                <App/>
+            </AppContainer>,
+            document.querySelector('#app')
+        );
+    });
 }

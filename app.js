@@ -1,15 +1,20 @@
 import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
-import Home from './components/home';
-import About from './components/about';
+import { Router, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import routes from './routes';
+import configureStore from './store/configureStore';
+import { syncHistoryWithStore } from 'react-router-redux';
+
+const store = configureStore();
+
+const history = syncHistoryWithStore(browserHistory, store);
 
 export default class App extends React.Component {
     render() {
         return (
-            <Router history={browserHistory}>
-                <Route path="/" component={Home} />
-                <Route path="/about" component={About} />
-            </Router>
+            <Provider store={store}>
+                <Router history={history} routes={routes} />
+            </Provider>
         );
     }
 }
