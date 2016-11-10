@@ -7,6 +7,12 @@ export default class About extends React.Component {
             <div>
                 <h1>HOME</h1>
                 <button><Link to="/">Home</Link></button>
+                <br/>
+                <div>
+                    <h2>0</h2>
+                    <button>+</button>
+                    <button>-</button>
+                </div>
             </div>
         );
     }
