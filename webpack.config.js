@@ -1,8 +1,9 @@
 'use strict';
-
+/* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const HOST = process.env.HOST || '127.0.0.1';
 const PORT = process.env.PORT || '8888';
@@ -39,8 +40,8 @@ module.exports = {
                 loader: 'babel'
             },
             {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader?modules=true&localIdentName=[path][name]---[local]---[hash:base64:5]'
+                test: /(\.css|\.scss)$/,
+                loader: 'style-loader!css-loader?modules=true&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss!sass'
             }
         ]
     },
@@ -64,5 +65,6 @@ module.exports = {
         configFile: './.eslintrc',
         failOnWarning: false,
         failOnError: true
-    }
+    },
+    postcss: () => [autoprefixer]
 };
