@@ -12,6 +12,7 @@ const Home = ({ value, increment, decrement }) => {
             <div>
                 <h2>{value}</h2>
                 <button
+                    id="test"
                     className={styles.button}
                     onClick={e => {
                         e.preventDefault();
