@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { store } from '../app';
-import Counter from './counter';
 
-export default class Home extends React.Component {
-    constructor() {
-        super();
-    }
-    increment() {
-        console.log('PRESSED!');
-        store.dispatch({type: 'INCREMENT'});
-    }
-    render() {
-        return (
+const Home = ({ value, increment, decrement }) => {
+    return (
+        <div>
+        <h1>ABOUT</h1>
+            <button><Link to="/about">About</Link></button>
+            <br/>
             <div>
-                <h1>ABOUT</h1>
-                <button><Link to="/about">About</Link></button>
-                <br/>
-                <Counter value={store.getState()} increment={this.increment.bind(this)}/>
+                <h2>{value}</h2>
+                <button
+                    onClick={e => {
+                        e.preventDefault();
+                        increment();
+                    }}
+                >+
+                </button>
+                <button
+                    onClick={e => {
+                        e.preventDefault();
+                        decrement();
+                    }}
+                >-
+                </button>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
+
+Home.propTypes = {
+    value: PropTypes.number,
+    increment: PropTypes.func,
+    decrement: PropTypes.func
+};
+
+export default Home;
