@@ -12,7 +12,7 @@ module.exports = {
     entry: [
     //  main: './index.js'
         'react-hot-loader/patch',
-        './index.js'
+        './src/index.js'
     ],
     output: {
         path: path.join(__dirname, 'public'),
@@ -41,7 +41,7 @@ module.exports = {
             },
             {
                 test: /(\.css|\.scss)$/,
-                loader: 'style-loader!css-loader?modules=true&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss!sass'
+                loader: 'style-loader!css-loader?modules=true&localIdentName=[path][name]---[local]---[hash:base64:5]&sourceMap!postcss!sass?sourceMap'
             }
         ]
     },
