@@ -1,5 +1,8 @@
+@import '../../static/variables';
+@import '../../static/scss/base';
+
 .pageWrapper {
-    background: yellow;
+    background: $test;
 }
 
 .navbar {

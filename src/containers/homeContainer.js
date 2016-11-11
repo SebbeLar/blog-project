@@ -1,4 +1,4 @@
-import Home from '../components/home';
+import Home from '../components/Home/home';
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions/valueActions';
 

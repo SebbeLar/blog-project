@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { Button } from 'react-bootstrap';
+//  import { Button } from 'react-bootstrap';
 import styles from './home.css';
 
 const Home = ({ value, increment, decrement }) => {
@@ -20,14 +20,13 @@ const Home = ({ value, increment, decrement }) => {
                     }}
                 >+
                 </button>
-                <Button
-                    bsStyle="danger"
+                <button
                     onClick={e => {
                         e.preventDefault();
                         decrement();
                     }}
                 >-
-                </Button>
+                </button>
             </div>
         </div>
     );
