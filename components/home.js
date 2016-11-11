@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import { Button } from 'react-bootstrap';
+import styles from './home.css';
 
 const Home = ({ value, increment, decrement }) => {
     return (
@@ -10,19 +12,21 @@ const Home = ({ value, increment, decrement }) => {
             <div>
                 <h2>{value}</h2>
                 <button
+                    className={styles.button}
                     onClick={e => {
                         e.preventDefault();
                         increment();
                     }}
                 >+
                 </button>
-                <button
+                <Button
+                    bsStyle="danger"
                     onClick={e => {
                         e.preventDefault();
                         decrement();
                     }}
                 >-
-                </button>
+                </Button>
             </div>
         </div>
     );

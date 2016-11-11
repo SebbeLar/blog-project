@@ -37,6 +37,10 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 loader: 'babel'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader?modules=true&localIdentName=[path][name]---[local]---[hash:base64:5]'
             }
         ]
     },
