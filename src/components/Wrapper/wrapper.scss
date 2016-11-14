@@ -2,29 +2,51 @@
 @import '../../static/scss/base';
 
 .pageWrapper {
-    background: $test;
+    background: white;
 }
 
 .navbar {
     border: 1px solid blue;
+    height: 60px;
+    background: #3a3a38;
 }
 
 .navbarLinksWrapper {
     margin: 0;
-    background: red;
+    height: inherit;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.logo {
+.navbarLinksBase {
     list-style: none;
+    line-height: 60px;
+    width: 100%;
+    border: 1px solid blue;
+    cursor: pointer;
+    background: #3a3a38;
+
+    &, a {
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        color: #fdf8ff;
+    }
+}
+
+.logo {
+    @extend .navbarLinksBase;
 }
 
 .navbarLink {
-    list-style: none;
+    @extend .navbarLinksBase;
 
     &:last-child {
         margin-right: 20px;
     }
+}
+
+.active {
+    font-size: 25px;
 }

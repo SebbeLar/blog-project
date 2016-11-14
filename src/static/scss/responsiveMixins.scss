@@ -1,0 +1,23 @@
+@mixin phonesPortrait() {
+    @media only screen and (min-width: 300px) {
+        @content;
+    }
+}
+
+@mixin phonesLandscape() {
+    @media only screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tabletPortrait() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktops() {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
