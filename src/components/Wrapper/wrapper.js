@@ -8,30 +8,23 @@ class Wrapper extends React.Component {
             <div className={styles.pageWrapper}>
                 <nav className={styles.navbar}>
                     <ul className={styles.navbarLinksWrapper}>
-                        <li className={styles.logo}>
                         <Link to="/"
-                            activeClassName={styles.active}>SL</Link>
-                        </li>
-                        <li className={styles.navbarLink}>
+                            className={styles.logo}>SL</Link>
                         <Link to="/home"
+                            className={styles.navbarLink}
                             activeClassName={styles.active}>Home</Link>
-                        </li>
-                        <li className={styles.navbarLink}>
                         <Link to="/skills"
+                            className={styles.navbarLink}
                             activeClassName={styles.active}>Skills</Link>
-                        </li>
-                        <li className={styles.navbarLink}>
                         <Link to="/blog"
+                            className={styles.navbarLink}
                             activeClassName={styles.active}>Blog</Link>
-                        </li>
-                        <li className={styles.navbarLink}>
                         <Link to="/about"
+                            className={styles.navbarLink}
                             activeClassName={styles.active}>About</Link>
-                        </li>
-                        <li className={styles.navbarLink}>
                         <Link to="/contact"
+                            className={styles.navbarLink}
                             activeClassName={styles.active}>Contact</Link>
-                        </li>
                     </ul>
                 </nav>
                 <div>
