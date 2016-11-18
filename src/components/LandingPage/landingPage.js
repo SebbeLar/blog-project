@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import styles from './landingPage.scss';
 
 const LandingPage = () => {
@@ -6,7 +7,7 @@ const LandingPage = () => {
         <div className={styles.container}>
             <h1 className={styles.headerName}>Sebastian Larsson</h1>
             <h3 className={styles.headerTitle}>Front end developer</h3>
-            <a className={styles.headerButton}>Continue</a>
+            <Link to="/home"><a className={styles.headerButton}>Continue</a></Link>
         </div>
     );
 };
