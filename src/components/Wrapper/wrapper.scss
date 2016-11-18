@@ -21,7 +21,7 @@
 }
 
 .navbarLinksBase {
-    border: 1px solid lighten($lightblack, 10%);
+    border: 1px solid darken($lightblack, 5%);
     list-style: none;
     line-height: 60px;
     width: 100%;
@@ -36,20 +36,20 @@
 .logo {
     @extend .navbarLinksBase;
     padding-right: 5vw;
-    background-color: $lightgreen;
-    border: 1px solid darken($lightgreen, 10%);
+    background-color: $lightblack;
+    border: 1px solid darken($lightblack, 10%);
 }
 
 .navbarLink {
     @extend .navbarLinksBase;
     transition: all 0.3s ease-out;
     &:hover {
-        background-color: $lightpink;
-        border: 1px solid darken($lightpink, 10%);
+        background-color: $darkgrey;
+        border: 1px solid darken($darkgrey, 10%);
     }
 }
 
 .active {
-    background-color: $lightpink;
-    border: 1px solid darken($lightpink, 10%);
+    background-color: $darkgrey;
+    border: 1px solid darken($darkgrey, 10%);
 }
