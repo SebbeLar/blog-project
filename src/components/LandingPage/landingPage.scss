@@ -1,0 +1,32 @@
+@import '../../static/variables';
+
+.container {
+    background: $lightblack;
+    height: 100vh;
+}
+
+.headerName {
+    color: white;
+    margin-left: 15vw;
+    padding-top: 15vh;
+    margin-bottom: 1rem;
+}
+
+.headerTitle {
+    color: white;
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+}
+
+.headerButton {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.3rem;
+    margin-left: 25vw;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
