@@ -9,7 +9,7 @@ export default class Test extends React.Component {
         };
     }
     handleClick() {
-        fetch('http://localhost:9090/api')
+        fetch('/api')
         .then(function(response) {
             console.log(response);
         });

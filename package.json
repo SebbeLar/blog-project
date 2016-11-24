@@ -5,13 +5,16 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "./node_modules/webpack/bin/webpack.js -p",
-    "dev": "webpack-dev-server --progress --profile --colors"
+    "clean": "rm -rf build public/bundle.js",
+    "build": "babel server --out-dir build && webpack",
+    "start": "NODE_ENV=production node ./build/server.js",
+    "development": "NODE_ENV=development node ./build/server.js"
   },
   "author": "Sebastian Larsson",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
     "babel-jest": "^17.0.0",

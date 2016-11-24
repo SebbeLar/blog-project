@@ -10,6 +10,7 @@ node_modules
 
 ### Dist ###
 dist
+build
 
 ### Vim ###
 *.swp
